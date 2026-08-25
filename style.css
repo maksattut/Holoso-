@@ -6,55 +6,57 @@ body {
   overflow: hidden;
 }
 
-/* Центрирование */
+/* Центр */
 .container {
   text-align: center;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 400px;
 }
 
 /* Заголовок */
 h1 {
-  font-size: 52px;
+  font-size: 56px;
   letter-spacing: 4px;
-  margin-bottom: 5px;
 }
 
 .subtitle {
   opacity: 0.7;
   margin-bottom: 25px;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 /* Карточка */
 .player {
-  background: rgba(255, 200, 120, 0.05);
+  background: rgba(255, 200, 120, 0.07);
   padding: 30px;
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 0 60px rgba(255, 200, 120, 0.08);
+  border-radius: 25px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 80px rgba(255, 200, 120, 0.1);
 }
 
 /* Винил */
 .cover {
-  width: 320px;
+  width: 85%;
+  max-width: 340px;
   border-radius: 50%;
   animation: spin 6s linear infinite;
   animation-play-state: paused;
-  box-shadow: 0 0 40px rgba(255, 200, 120, 0.3);
+  box-shadow: 0 0 50px rgba(255, 200, 120, 0.4);
 }
 
 /* Кнопки */
 .controls button {
-  margin: 15px;
-  padding: 15px 20px;
+  margin: 12px;
+  padding: 16px 22px;
   background: #c9a66b;
   border: none;
-  border-radius: 20px;
+  border-radius: 25px;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 20px;
   transition: 0.3s;
 }
 
@@ -65,24 +67,24 @@ h1 {
 
 /* Название трека */
 #trackName {
-  margin-top: 10px;
-  opacity: 0.8;
-  font-size: 14px;
+  margin-top: 12px;
+  opacity: 0.85;
+  font-size: 16px;
 }
 
-/* Анимация вращения */
+/* Анимация */
 @keyframes spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
 
-/* Свет (свеча) */
+/* Свет */
 .light {
   position: absolute;
-  width: 500px;
-  height: 500px;
+  width: 600px;
+  height: 600px;
   background: radial-gradient(circle, rgba(255,200,120,0.25), transparent);
-  top: 20%;
+  top: 10%;
   left: 50%;
   transform: translateX(-50%);
   animation: flicker 4s infinite;
@@ -94,7 +96,7 @@ h1 {
   50% { opacity: 1; }
 }
 
-/* Стартовый экран */
+/* Оверлей */
 .overlay {
   position: fixed;
   width: 100%;
@@ -106,18 +108,43 @@ h1 {
   z-index: 10;
 }
 
-/* Текст */
+/* Текст старта */
 .start-text {
-  font-size: 22px;
+  font-size: 24px;
   max-width: 320px;
-  line-height: 1.5;
+  line-height: 1.6;
   text-align: center;
   cursor: pointer;
-  opacity: 0.85;
+  opacity: 0.9;
+  padding: 20px;
   transition: 0.3s;
 }
 
 .start-text:hover {
   opacity: 1;
   transform: scale(1.05);
+}
+
+/* 📱 АДАПТАЦИЯ ПОД ТЕЛЕФОН */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 42px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .cover {
+    width: 90%;
+  }
+
+  .controls button {
+    font-size: 18px;
+    padding: 14px 18px;
+  }
+
+  .start-text {
+    font-size: 20px;
+  }
 }
