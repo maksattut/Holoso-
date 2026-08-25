@@ -1,1 +1,50 @@
-<!DOCTYPE html><html lang='ru'><head><meta charset='UTF-8'><title>Асиль</title><link rel='stylesheet' href='style.css'></head><body><div class='overlay' id='overlay'><div class='start-text' onclick='startExperience()'>нажми, когда захочешь почувствовать меня рядом</div></div><div class='light'></div><div class='container'><h1>Асиль</h1><p class='subtitle'>ты звучишь как джаз</p><div class='player'><img src='cover.jpg' class='cover' id='cover'><div class='controls'><button onclick='prevTrack()'>⏮</button><button onclick='toggleMusic()'>▶</button><button onclick='nextTrack()'>⏭</button></div><p id='trackName'></p></div></div><audio id='audio'></audio><audio id='vinyl' src='music/vinyl.mp3' loop></audio><script src='script.js'></script></body></html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- ВАЖНО ДЛЯ ТЕЛЕФОНА -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Асиль</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Стартовый экран -->
+<div class="overlay" id="overlay">
+  <div class="start-text" onclick="startExperience()">
+    нажми, когда захочешь почувствовать меня рядом
+  </div>
+</div>
+
+<!-- Свет -->
+<div class="light"></div>
+
+<!-- Основной блок -->
+<div class="container">
+  <h1>Асиль</h1>
+  <p class="subtitle">ты звучишь как джаз</p>
+
+  <div class="player">
+    <img src="cover.jpg" class="cover" id="cover">
+
+    <div class="controls">
+      <button onclick="prevTrack()">⏮</button>
+      <button onclick="toggleMusic()">▶</button>
+      <button onclick="nextTrack()">⏭</button>
+    </div>
+
+    <p id="trackName"></p>
+  </div>
+</div>
+
+<!-- Аудио -->
+<audio id="audio"></audio>
+<audio id="vinyl" src="music/vinyl.mp3" loop></audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>
